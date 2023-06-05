@@ -61,4 +61,14 @@ const typed = new Typed('.multiple-text', {
 })
 
 
+/* ########### read more ############# */
+let content = document.getElementById('about-read');
+let showBtn = document.getElementById('read-more-btn');
+function readMore(){
+    console.log('adj')
+    content.style.display = 'block';
+    showBtn.style.display = 'none';
+}
+
+
 
