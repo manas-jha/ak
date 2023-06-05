@@ -11,6 +11,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+::selection {
+    color: red;
+    background-color: var(--main-color);
+}
+
 :root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
@@ -58,6 +63,7 @@ section {
 }
 
 .navbar a {
+    position: relative;
     font-size: 1.7rem;
     color: var(--text-color);
     margin-left: 4rem;
@@ -68,6 +74,22 @@ section {
 .navbar a.active {
     color: var(--main-color);
 }
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 0;
+    bottom: -3px;
+    left: 0;
+    height: .2rem;
+    transition: .3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
 
 #menu-icon {
     font-size: 3.6rem;
@@ -140,6 +162,7 @@ span {
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -155,8 +178,11 @@ span {
 }
 
 
-
-
+#about-read {
+    /* transition: .5s ease; */
+    color: var(--text-color);
+    display: none;
+}
 
 .heading {
     text-align: center;
@@ -243,6 +269,7 @@ span {
 
 .portfolio-box img {
     width: 100%;
+    height: 20rem;
 }
 
 .portfolio-box:hover img {
@@ -473,6 +500,10 @@ span {
     html {
         font-size: 55%;
     }
+
+    .portfolio-box img {
+        height: 25rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -613,6 +644,7 @@ span {
 
 
 
+/* extra stylling try */
 
 
 
